@@ -20,7 +20,7 @@ export class HiWay2LlmApi implements ICredentialType {
 			default: '',
 			required: true,
 			placeholder: 'hw_live_...',
-			description: 'Your HiWay2LLM API key. <a href="https://app.hiway2llm.com/signup" target="_blank">Create a free account</a>, then go to <a href="https://app.hiway2llm.com/settings/api-keys" target="_blank">Settings → API Keys</a> to generate your key.',
+			description: 'Your HiWay2LLM API key. <a href="https://app.hiway2llm.com/auth" target="_blank">Create a free account</a>, then go to <a href="https://app.hiway2llm.com/settings/api-keys" target="_blank">Settings → API Keys</a> to generate your key.',
 		},
 		{
 			displayName: 'Base URL',
