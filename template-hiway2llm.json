@@ -1,0 +1,61 @@
+{
+  "name": "[Template] HiWay2LLM — Chat with any LLM",
+  "nodes": [
+    {
+      "id": "sticky-setup",
+      "name": "Setup",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [-200, 160],
+      "parameters": {
+        "width": 380,
+        "height": 320,
+        "content": "## Setup (2 min)\n\n**1. Create a free account**\nGo to app.hiway2llm.com/auth\n\n**2. Generate an API key**\nSettings > API Keys > New key (format: hw_live_...)\n\n**3. Add credentials in n8n**\nClick the HiWay2LLM node > Credentials > New > paste your key\n\nThen click Test workflow!"
+      }
+    },
+    {
+      "id": "sticky-output",
+      "name": "Output",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [700, 160],
+      "parameters": {
+        "width": 340,
+        "height": 320,
+        "content": "## Output fields\n\n- text: the model response\n- model: model actually used\n- finish_reason: why generation stopped\n- usage.total_tokens: tokens consumed\n\nTip: enable Return Full Response in options to get the raw OpenAI-format object."
+      }
+    },
+    {
+      "id": "node-trigger",
+      "name": "Run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [200, 300],
+      "parameters": {}
+    },
+    {
+      "id": "node-hiway",
+      "name": "HiWay2LLM",
+      "type": "n8n-nodes-hiway2llm.hiWay2Llm",
+      "typeVersion": 1,
+      "position": [460, 300],
+      "parameters": {
+        "operation": "chat",
+        "model": "anthropic/claude-sonnet-4-6",
+        "systemPrompt": "You are a helpful assistant. Be concise.",
+        "userMessage": "What are the 3 best practices for writing clean code? Reply in 3 bullet points.",
+        "options": {
+          "temperature": 0.7,
+          "maxTokens": 512
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Run manually": {
+      "main": [[{ "node": "HiWay2LLM", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": { "executionOrder": "v1" },
+  "pinData": {}
+}
