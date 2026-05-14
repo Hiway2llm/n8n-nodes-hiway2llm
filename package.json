@@ -1,0 +1,67 @@
+{
+  "name": "n8n-nodes-hiway2llm",
+  "version": "0.1.0",
+  "description": "n8n community node for HiWay2LLM — the smart LLM router that cuts your AI costs by 70-90%",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "llm",
+    "ai",
+    "openai",
+    "anthropic",
+    "claude",
+    "gpt",
+    "hiway2llm",
+    "llm-router",
+    "cost-optimization"
+  ],
+  "license": "MIT",
+  "homepage": "https://hiway2llm.com",
+  "author": {
+    "name": "Mytm-Group",
+    "email": "contact@hiway2llm.com",
+    "url": "https://mytm-group.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiway2llm/n8n-nodes-hiway2llm"
+  },
+  "bugs": {
+    "url": "https://github.com/hiway2llm/n8n-nodes-hiway2llm/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && npm run copy:icons",
+    "copy:icons": "copyfiles -u 1 nodes/**/*.svg dist/nodes",
+    "dev": "tsc --watch",
+    "lint": "eslint nodes credentials --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/HiWay2LlmApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/HiWay2Llm/HiWay2Llm.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.0.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.2",
+    "n8n-workflow": "*",
+    "typescript": "^5.3.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}

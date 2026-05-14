@@ -1,0 +1,18 @@
+{
+  "node": "n8n-nodes-hiway2llm.hiWay2Llm",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["AI"],
+  "resources": {
+    "primaryDocumentation": [
+      {
+        "url": "https://app.hiway2llm.com/docs"
+      }
+    ],
+    "credentialDocumentation": [
+      {
+        "url": "https://app.hiway2llm.com/settings/api-keys"
+      }
+    ]
+  }
+}
