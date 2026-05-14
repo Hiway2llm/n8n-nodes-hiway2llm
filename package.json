@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hiway2llm/n8n-nodes-hiway2llm"
+    "url": "git+https://github.com/hiway2llm/n8n-nodes-hiway2llm.git"
   },
   "bugs": {
     "url": "https://github.com/hiway2llm/n8n-nodes-hiway2llm/issues"
