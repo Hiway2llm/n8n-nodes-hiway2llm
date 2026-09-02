@@ -1,0 +1,6 @@
+# Toute adresse nominative historique est mappee sur l'adresse noreply GitHub.
+# Filet de securite : si un commit repasse un jour avec une adresse perso,
+# git log / blame / shortlog afficheront quand meme la noreply.
+Johan Bretonneau <269675242+Black-Mytm@users.noreply.github.com> <johan@mytm-group.com>
+Johan Bretonneau <269675242+Black-Mytm@users.noreply.github.com> <admin@mytm-group.com>
+Johan Bretonneau <269675242+Black-Mytm@users.noreply.github.com> <johan.bretonneau@gmail.com>
